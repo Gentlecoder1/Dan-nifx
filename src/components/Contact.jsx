@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function Contact(){
+const Contact = () => {
+
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -15,3 +16,4 @@ export default function Contact(){
     </section>
   )
 }
+export default Contact

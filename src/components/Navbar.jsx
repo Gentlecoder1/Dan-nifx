@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+// import { button } from "@/components/ui/button";
+// import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1D1C1D]/70 backdrop-blur-md ${
         isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
           : "bg-transparent"
@@ -45,8 +45,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="text-2xl font-bold">
-            <span className="text-primary">Dan</span>
-            <span className="text-foreground">_nifx</span>
+            <span className="">Dan</span>
+            <span className="text-[#ffd700]">_nifx</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -55,25 +55,26 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-primary transition-colors"
+                className="hover:text-[#ffd700] transition-colors"
               >
                 {link.label}
               </button>
             ))}
-            <Button
+            <button
               onClick={() => scrollToSection("contact")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="py-3 px-5 rounded-xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-white"
             >
               Get In Touch
-            </Button>
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            X
+            {/* {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
           </button>
         </div>
 
@@ -90,18 +91,18 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground hover:text-primary transition-colors text-left"
+                  className="hover:text-[#ffd700] transition-colors text-left"
                 >
                   {link.label}
                 </button>
               ))}
-              <Button
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                className="p-3 rounded-2xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-white w-full"
               >
                 Get In Touch
-              </Button>
-            </div>
+              </button>
+            </div> 
           </motion.div>
         )}
       </div>

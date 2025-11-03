@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Strategy(){
+const Strategy = () => {
   return (
     <section id="strategy" className="strategy">
       <div className="container">
@@ -11,3 +11,5 @@ export default function Strategy(){
     </section>
   )
 }
+
+export default Strategy;

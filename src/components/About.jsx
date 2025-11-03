@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function About(){
+const About = () => {
   return (
     <section id="about" className="about fade-in">
       <div className="container">
@@ -10,3 +10,5 @@ export default function About(){
     </section>
   )
 }
+
+export default About

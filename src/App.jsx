@@ -1,27 +1,27 @@
 import React from 'react'
-import './App.css'
-import './index.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Strategy from './components/Strategy'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
-function App(){
+const App = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Navbar />
       <main>
-        <Hero />
-        <About />
+        <div id='hero'>
+          <Hero />
+        </div>
+        {/* <About />
         <Strategy />
-        <Contact />
+        <Contact /> */}
       </main>
-      <footer className='bg-green-800'>
-        <p className='text-red-600 font-bold'>@ 2025 Dan_nifx — Built with passion and purpose</p>
-      </footer>
-    </>
+      <Footer />
+    </div>
   )
 }
 
 export default App
+
