@@ -17,8 +17,8 @@ function App(){
         <Strategy />
         <Contact />
       </main>
-      <footer>
-        <p>@ 2025 Dan_nifx — Built with passion and purpose</p>
+      <footer className='bg-green-800'>
+        <p className='text-red-600 font-bold'>@ 2025 Dan_nifx — Built with passion and purpose</p>
       </footer>
     </>
   )
