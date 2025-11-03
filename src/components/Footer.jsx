@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-// import { TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           className="text-center"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            {/* <TrendingUp className="w-8 h-8 text-primary" /> */}
+            <TrendingUp className="w-8 h-8 text-primary" />
             <span className="text-2xl font-bold">
               <span className="text-primary">Forex</span>
               <span className="text-foreground">Trader</span>

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import { button } from "@/components/ui/button";
-// import { Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1D1C1D]/70 backdrop-blur-md ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#11182A]/70 backdrop-blur-md ${
         isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
           : "bg-transparent"
@@ -62,7 +62,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="py-3 px-5 rounded-xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-white"
+              className="py-1 px-4 rounded-xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-black"
             >
               Get In Touch
             </button>
@@ -73,8 +73,7 @@ const Navbar = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            X
-            {/* {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -98,7 +97,7 @@ const Navbar = () => {
               ))}
               <button
                 onClick={() => scrollToSection("contact")}
-                className="p-3 rounded-2xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-white w-full"
+                className="p-3 rounded-2xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-black w-full"
               >
                 Get In Touch
               </button>
