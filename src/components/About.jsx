@@ -58,17 +58,9 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center justify-center mb-4">
-            <span
-              className="px-3 py-1 rounded-full text-[#ffd700] font-semibold"
-              style={{ background: "rgba(255,215,0,0.06)", boxShadow: "0 0 40px hsl(142 76% 36% / 0.3)" }}
-            >
-              About
-            </span>
-          </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ffd700]">
-            Forex Trading Excellence
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Forex Trading <span className="text-[#ffd700]">Excellence</span>
           </h2>
           <p className="text-gray-300 text-lg">
             Combining market-structure based analysis, confluence, and strict risk
@@ -80,23 +72,37 @@ export default function About() {
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
-              <motion.article
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="p-6 rounded-xl bg-[#0b0b0b]/50 border border-black/20"
-                style={{ boxShadow: "0 8px 32px hsl(0 0% 0% / 0.4)" }}
+                className="p-8 rounded-xl bg-[#0b0b0b]/50 border border-black/20 shadow-xl shadow-gray-800 transition-colors group hover:border-[#ffd700]/20"
               >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ background: "rgba(255,215,0,0.06)", boxShadow: "0 0 40px hsl(142 76% 36% / 0.3)" }}>
-                  <Icon className="w-6 h-6 text-[#ffd700]" />
+                <div className="bg-[#ffd700]/10 p-4 w-fit rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#ffd700]/20">
+                  <Icon color="#ffd700" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#ffd700] mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
-              </motion.article>
+                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <p className="text-[#787c83] text-lg leading-relaxed">{feature.description}</p>
+              </motion.div>
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 max-w-4xl mx-auto p-8 rounded-xl border border-[#ffd700]/20"
+        >
+          <h3 className="text-2xl font-bold mb-4 text-center">Trading Philosophy</h3>
+          <p className="text-[#787c83] text-lg text-center leading-relaxed">
+            Success in forex trading requires more than just technical knowledge. It demands discipline, emotional control, 
+            and a systematic approach to risk management. Every trade is carefully planned with clear entry and exit criteria, 
+            ensuring that capital preservation remains the top priority while pursuing consistent growth.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

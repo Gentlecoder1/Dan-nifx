@@ -28,8 +28,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
-            style={{ backgroundImage: 'linear-gradient(to right, hsl(210, 40%, 98%), #ffd700, hsl(45, 100%, 51%))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#f0f4f8] via-[#ffd700] to-[#ffd700] bg-clip-text text-transparent"
           >
             Hello, I'm <span className="text-[#ffd700]">Dan_nifx</span>
           </motion.h1>
@@ -38,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-[#f0f4f8]"
           >
             Trend-Following Forex Trader
           </motion.p>
@@ -47,7 +46,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-[#f0f4f8]"
           >
             Mastering the markets through structure, confluence, and discipline.
           </motion.p>
@@ -81,9 +80,9 @@ const Hero = () => {
               { value: "92%", label: "Win Rate" },
               { value: "$2M+", label: "Trading Volume" },
             ].map((stat, index) => (
-              <div key={index} className="p-6 rounded-xl bg-[#0b0b0b]/50 backdrop-blur-sm border border-[#ffd700]/20" style={{ boxShadow: '0 8px 32px hsl(0 0% 0% / 0.4)' }}>
+              <div key={index} className="p-6 rounded-xl bg-[#0b0b0b]/50 backdrop-blur-sm border border-[#ffd700]/20 shadow-[0_8px_32px_#000000]/40">
                 <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-[#f0f4f8]">{stat.label}</div>
               </div>
             ))}
           </motion.div>

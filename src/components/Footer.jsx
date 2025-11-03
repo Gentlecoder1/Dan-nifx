@@ -16,17 +16,17 @@ const Footer = () => {
             <TrendingUp className="w-8 h-8 text-primary" />
             <span className="text-2xl font-bold">
               <span className="text-primary">Forex</span>
-              <span className="text-foreground">Trader</span>
+              <span className="text-[#f0f4f8]">Trader</span>
             </span>
           </div>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+          <p className="mb-6 max-w-md mx-auto text-[#f0f4f8]">
             Professional forex trading with proven strategies and consistent results.
           </p>
           <div className="border-t border-border pt-6">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#f0f4f8]">
               © {new Date().getFullYear()} ForexTrader. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground mt-2">
+            <p className="text-xs mt-2 text-[#f0f4f8]">
               Trading forex involves substantial risk. Past performance is not indicative of future results.
             </p>
           </div>
