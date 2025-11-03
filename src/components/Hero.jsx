@@ -37,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-[#f0f4f8]"
+            className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-[#f0f4f8]"
           >
             Trend-Following Forex Trader
           </motion.p>

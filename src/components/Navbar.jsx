@@ -62,7 +62,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="py-1 px-4 rounded-xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-black"
+              className="py-2 px-4 rounded-lg bg-[#ffd700] hover:bg-[#ffd700]/90 text-black text-sm font-semibold"
             >
               Get In Touch
             </button>
@@ -97,7 +97,7 @@ const Navbar = () => {
               ))}
               <button
                 onClick={() => scrollToSection("contact")}
-                className="p-3 rounded-2xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-black w-full"
+                className="p-3 rounded-2xl bg-[#ffd700] hover:bg-[#ffd700]/90 text-black w-full text-sm font-semibold"
               >
                 Get In Touch
               </button>
