@@ -1,6 +1,5 @@
-// import { Card } from "@/components/ui/card";
-// import { Badge } from "@/components/ui/badge";
 import { Target, LineChart, Clock, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 const strategyPoints = [
   {
@@ -31,7 +30,7 @@ const strategyPoints = [
 
 const Strategy = () => {
   return (
-    <section id="strategy" className="py-24 bg-background relative">
+    <section id="strategies" className="py-24 bg-[#131621] relative">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -47,13 +46,17 @@ const Strategy = () => {
           {strategyPoints.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div 
+              <motion.div 
                 key={index}
-                className="p-8 bg-card/80 backdrop-blur-sm border border-[#ffd700]/30 hover:border-[#ffd700] rounded-2xl transition-all duration-300 hover:shadow-[0_0_40px_#ffd700]/20 group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-[#0b0b0b]/50 p-8 bg-card/80 backdrop-blur-sm border border-[#ffd700]/30 hover:border-[#ffd700] rounded-2xl transition-all duration-300 hover:shadow-[0_0_40px_#ffd700]/20 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
+                  <div className="">
                     <div className="p-4 rounded-xl bg-gradient-to-br from-[#d4c881] to-[#ffd700] group-hover:shadow-[0_0_40px_#ffd700]/40 w-fit transition-all duration-300">
                       <Icon color="black" size={35} />
                     </div>
@@ -79,7 +82,7 @@ const Strategy = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
