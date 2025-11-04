@@ -1,14 +1,25 @@
 import { motion } from "framer-motion";
 import { TrendingUp, BarChart3, Shield } from "lucide-react";
+import heroImage from "../assets/hero-forex.jpg";
+import CountUp from "react-countup";
 // import { button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-hero">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `linear-gradient(rgba(16, 23, 42, 0.85), rgba(16, 23, 42, 0.85)), url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#ffd700]/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#f8fbfd]/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#ffd700]/30 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -76,9 +87,30 @@ const Hero = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20"
           >
             {[
-              { value: "8+", label: "Years Experience" },
-              { value: "92%", label: "Win Rate" },
-              { value: "$2M+", label: "Trading Volume" },
+              { 
+                value: (
+                  <>
+                    {<CountUp end={8} duration={7.5} />}+
+                  </>
+                ), 
+                label: "Years Experience" 
+              },
+              { 
+                value: (
+                  <>
+                    {<CountUp end={92} duration={5.5} />}%
+                  </>
+                ), 
+                label: "Win Rate" 
+              },
+              { 
+                value: (
+                  <>
+                    ${<CountUp end={2} duration={8.5} />}M+
+                  </>
+                ), 
+                label: "Trading Volume" 
+              },
             ].map((stat, index) => (
               <div key={index} className="p-6 rounded-xl bg-[#0b0b0b]/50 backdrop-blur-sm border border-[#ffd700]/20 shadow-[0_8px_32px_#000000]/40">
                 <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">{stat.value}</div>

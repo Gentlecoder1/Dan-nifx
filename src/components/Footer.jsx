@@ -3,7 +3,7 @@ import { TrendingUp } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border py-12">
+    <footer className="bg-card border-t border-gray-500 py-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,16 +13,15 @@ const Footer = () => {
           className="text-center"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <TrendingUp className="w-8 h-8 text-primary" />
+            <TrendingUp color="#ffd700" />
             <span className="text-2xl font-bold">
-              <span className="text-primary">Forex</span>
-              <span className="text-[#f0f4f8]">Trader</span>
+              <span className="text-[#ffd700]">Forex</span>Trader
             </span>
           </div>
           <p className="mb-6 max-w-md mx-auto text-[#f0f4f8]">
             Professional forex trading with proven strategies and consistent results.
           </p>
-          <div className="border-t border-border pt-6">
+          <div className="border-t border-gray-500 pt-6">
             <p className="text-sm text-[#f0f4f8]">
               © {new Date().getFullYear()} ForexTrader. All rights reserved.
             </p>
