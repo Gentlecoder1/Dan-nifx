@@ -62,7 +62,7 @@ const Hero = () => {
             Mastering the markets through structure, confluence, and discipline.
           </motion.p>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -76,7 +76,7 @@ const Hero = () => {
               <Shield className="w-5 h-5 mr-2" />
               <span>Learn More</span>
             </button>
-          </motion.div>
+          </motion.div> */}
 
 
           {/* Stats */}
